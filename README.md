@@ -58,6 +58,8 @@ class MixinImpl
 	end
 end
 ```
+### Running generic Ruby script
+There is an eval method in Java Scripting API (JSR-223), which can be used to run simple scripts (either from string or from a Reader, such as FileReader, ...). In this example it is used to obtain the implementation of [Model interface](src/main/java/sources/occi/interfaces/Model.java). The static method `getModel` implemented in the interface is used to run the necessary Ruby code.
 ### Generating wrapper classes automatically
 It is possible to generate Java wrappers from ruby classes by invoking jrubyc. Jruby-maven-plugin can be used to generate them automatically during the build process. Snippet of pom.xml down below presents the way to do it.
 ```xml
