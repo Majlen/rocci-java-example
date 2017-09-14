@@ -3,14 +3,9 @@ import sources.Image;
 import sources.occi.ROCCI;
 import cz.cesnet.cloud.occi.interfaces.Model;
 
-import javax.script.ScriptContext;
-import javax.script.ScriptEngine;
-import javax.script.ScriptEngineManager;
 import javax.script.ScriptException;
 import java.io.*;
 import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
 
 public class ROCCIExample {
 	public static void main(String[] args) {
