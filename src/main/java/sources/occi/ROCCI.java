@@ -3,8 +3,8 @@ package sources.occi;
 import sources.Flavour;
 import sources.Image;
 import sources.Service;
-import sources.occi.interfaces.Mixin;
-import sources.occi.interfaces.Model;
+import cz.cesnet.cloud.occi.interfaces.Mixin;
+import cz.cesnet.cloud.occi.interfaces.Model;
 
 import javax.script.ScriptException;
 import java.io.IOException;

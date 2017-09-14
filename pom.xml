@@ -17,13 +17,6 @@
 		<rocci.version>5.0.0</rocci.version>
 	</properties>
 
-	<repositories>
-		<repository>
-			<id>rubygems-releases</id>
-			<url>http://rubygems-proxy.torquebox.org/releases</url>
-		</repository>
-	</repositories>
-
 	<dependencies>
 		<dependency>
 			<groupId>org.jruby</groupId>
@@ -31,10 +24,9 @@
 			<version>${jruby.version}</version>
 		</dependency>
 		<dependency>
-			<groupId>rubygems</groupId>
-			<artifactId>occi-core</artifactId>
-			<version>${rocci.version}</version>
-			<type>gem</type>
+			<groupId>cz.cesnet.cloud</groupId>
+			<artifactId>jrocci-wrappers</artifactId>
+			<version>0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
@@ -75,38 +67,6 @@
 								</transformer>
 							</transformers>
 						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-
-			<plugin>
-				<groupId>de.saumya.mojo</groupId>
-				<artifactId>gem-maven-plugin</artifactId>
-				<version>1.1.5</version>
-				<configuration>
-					<includeRubygemsInResources>true</includeRubygemsInResources>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>initialize</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>de.saumya.mojo</groupId>
-				<artifactId>jruby-maven-plugin</artifactId>
-				<version>1.1.5</version>
-				<configuration>
-					<generateJava>true</generateJava>
-				</configuration>
-				<executions>
-					<execution>
-						<phase>process-resources</phase>
-						<goals>
-							<goal>compile</goal>
-						</goals>
 					</execution>
 				</executions>
 			</plugin>

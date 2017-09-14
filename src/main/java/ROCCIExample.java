@@ -1,7 +1,7 @@
 import sources.Flavour;
 import sources.Image;
 import sources.occi.ROCCI;
-import sources.occi.interfaces.Model;
+import cz.cesnet.cloud.occi.interfaces.Model;
 
 import javax.script.ScriptContext;
 import javax.script.ScriptEngine;
