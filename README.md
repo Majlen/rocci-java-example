@@ -1,6 +1,6 @@
 # rocci-java-example - Example of using occi-core Ruby Gem in Java
 
-This repository presents a way of integrating occi-core Ruby Gem in Java applications.
+This repository presents a way of integrating occi-core Ruby Gem in Java applications. It uses jrocci-wrappers library, where the wrappers are developed.
 
 The example uses maven extensively, it is used for fetching the Gem and bundling it inside the Java archive (may be simply swapped for Web archive).
 The main output of the example is the shaded jar with all the dependencies.
@@ -59,7 +59,7 @@ class MixinImpl
 end
 ```
 ### Running generic Ruby script
-There is an eval method in Java Scripting API (JSR-223), which can be used to run simple scripts (either from string or from a Reader, such as FileReader, ...). In this example it is used to obtain the implementation of [Model interface](src/main/java/sources/occi/interfaces/Model.java). The static method `getModel` implemented in the interface is used to run the necessary Ruby code.
+There is an eval method in Java Scripting API (JSR-223), which can be used to run simple scripts (either from string or from a Reader, such as FileReader, ...). In this example it is used to obtain the implementation of Model interface. The static method `getModel` implemented in the interface is used to run the necessary Ruby code.
 ### Generating wrapper classes automatically
 It is possible to generate Java wrappers from ruby classes by invoking jrubyc. Jruby-maven-plugin can be used to generate them automatically during the build process. Snippet of pom.xml down below presents the way to do it.
 ```xml
